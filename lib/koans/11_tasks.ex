@@ -4,7 +4,7 @@ defmodule Tasks do
   koan "Tasks can be used for asynchronous computations with results" do
     task = Task.async(fn -> 3 * 3 end)
     do_other_stuff()
-    assert Task.await(task) + 1 == ___
+    assert Task.await(task) + 1 == 10
   end
 
   koan "If you don't need a result, use start_link/1" do
